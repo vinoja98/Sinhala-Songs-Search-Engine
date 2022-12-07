@@ -2,7 +2,7 @@
 This project is to build a Text Corpus and a Search Application
 
 ## Introduction
-The search engine will be developed to search *Sinhala songs in the new pop genre*. The seach engine will be developed using the **ElasticSearch** framework.
+The search engine will be developed to search about *Sinhala songs in the new pop genre*. The seach engine will be developed using the **ElasticSearch** framework.
 
 ## Building Corpus
 Attributes mentioned below will be available in the dataset.
