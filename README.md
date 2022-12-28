@@ -6,6 +6,7 @@ The search engine will be developed to search about *Sinhala songs in the new po
 
 ## Building Corpus
 Attributes mentioned below will be available in the dataset.
+- Title of the song
 - Lyrics
 - Lyricist
 - Album
