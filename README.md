@@ -10,6 +10,10 @@ The search engine will be developed to search about *Sinhala songs in the new po
 - Go to corpus directory & Run `scrapy crawl songs -O data.json` to store the scraped data in json format(& in unicode).
 - Go to corpus/corpus directory & Run `python3 -m unicode_converter` to convert unicode to Sinhala characters.
 
+## Indexing
+- Use POST songs and add content in search/tokenize.json in Kibana Console to create index
+- Use POST _bulk and add content in corpus/song1.txt to add documents to the index
+
 ## Main functions of the system
 - Search a song by any of the above fields
 - Filter querying
