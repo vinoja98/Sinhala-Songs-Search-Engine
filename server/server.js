@@ -28,7 +28,8 @@ app.get('/results', (req, res) => {
                 match: 
                     { artist: 
                         { query: passedArtist,
-                        operator: "AND"} 
+                            operator: "AND"
+                        } 
                     },
               },
               
