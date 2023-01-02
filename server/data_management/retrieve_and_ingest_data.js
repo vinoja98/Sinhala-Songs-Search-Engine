@@ -3,6 +3,7 @@ const router = express.Router();
 const client = require('../elasticsearch/client');
 require('log-timestamp');
 const fs = require('fs');
+var c=0;
 
 router.get('/songs', async function (req, res) {
   console.log('Loading Application...');
@@ -18,8 +19,8 @@ router.get('/songs', async function (req, res) {
       console.log('Data retrieved!');
 
       results = SONGS;
-
-      console.log('Indexing data...');
+      c=c+1
+      console.log('Indexing data...',c);
       results.map(
         async (results) => (
           (songObject = {
