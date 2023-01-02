@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './App.css';
 
 const App = () => {
-  const [chosenQuery, setchosenQuery] = useState(null);
+  const [chosenArtist, setchosenArtist] = useState(null);
   const [documents, setDocuments] = useState(null);
 
   const sendSearchRequest = () => {
@@ -12,14 +12,14 @@ const App = () => {
       url: 'http://localhost:3002/results',
       params: {
      
-        location: chosenQuery,
+        artist: chosenArtist,
    
       },
     };
     axios
       .request(results)
       .then((response) => {
-        console.log(response.data);
+        console.log("res",response.data);
         setDocuments(response.data);
       })
       .catch((error) => {
@@ -36,7 +36,7 @@ const App = () => {
       </nav>
       <p className='directions'>
         {' '}
-        Enter the search query here:
+        Enter the search Artist here:
       </p>
       <div className='main'>
         <div className='type-selector'>
@@ -48,9 +48,9 @@ const App = () => {
                   <input
                     className='form'
                     type='text'
-                    placeholder='Enter Query'
-                    value={chosenQuery}
-                    onChange={(e) => setchosenQuery(e.target.value)}
+                    placeholder='Enter Artist'
+                    value={chosenArtist}
+                    onChange={(e) => setchosenArtist(e.target.value)}
                   />
                 </label>
               </form>
@@ -71,7 +71,7 @@ const App = () => {
             {documents.map((document) => (
               <div className='results-card'>
                 <div className='results-text'>
-                  <p>{document._source.song}</p>
+                  <p>Title: {document._source.title}</p>
                 </div>
               </div>
             ))}
