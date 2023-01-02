@@ -25,7 +25,11 @@ app.get('/results', (req, res) => {
           bool: {
             filter: [
               {
-                match: { artist: passedArtist },
+                match: 
+                    { artist: 
+                        { query: passedArtist,
+                        operator: "AND"} 
+                    },
               },
               
             ],
