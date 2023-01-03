@@ -36,9 +36,31 @@ app.get('/results', (req, res) => {
             ],
           },
         },
+        sort: [
+          {
+            views: {
+              order: "desc"
+            }
+          }
+        ],
+        aggs: {
+          music_composers: {
+            terms: {
+              field: "musicComposer.keyword"
+            }
+          },
+          lyricists: {
+            terms: {
+              field: "lyricist.keyword"
+            }
+          }
+        }
       },
     });
-    res.json(body.hits.hits);
+    res.json({
+      hits: body.hits.hits,
+      aggregations: body.aggregations
+    });
   }
   sendESRequest();
 });

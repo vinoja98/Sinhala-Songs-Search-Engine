@@ -15,6 +15,9 @@ The search engine will be developed to search about *Sinhala songs in the new po
 - Use POST _bulk and add content in corpus/song1.txt to add documents to the index
 
 ## Main functions of the system
-- Search a song by any of the above fields
-- Filter querying
-- Range querying
+- **Full Text Search**
+    Search a song by name of the artist
+    Example - සුනිල් එදිරිසිංහ ගැයු ගීත, සුනිල් එදිරිසිංහ කිව් ගී
+- **Faceted Search**
+    Filter search results based on the music composer and the lyricist
+- **Sort by Views**
