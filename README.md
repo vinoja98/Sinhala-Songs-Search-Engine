@@ -21,3 +21,5 @@ The search engine will be developed to search about *Sinhala songs in the new po
 - **Faceted Search**\
     Filter search results based on the music composer and the lyricist
 - **Sort by Views**
+
+![search](/images/search.png)
