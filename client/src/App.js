@@ -40,7 +40,7 @@ const App = () => {
       </nav>
       <p className='directions'>
         {' '}
-        Enter the search Artist here:
+        Enter a query by using the name of the Artist:
       </p>
       <div className='main'>
         <div className='type-selector'>
@@ -52,7 +52,7 @@ const App = () => {
                   <input
                     className='form'
                     type='text'
-                    placeholder='Enter Artist'
+                    placeholder='Full text search'
                     value={chosenArtist}
                     onChange={(e) => setchosenArtist(e.target.value)}
                   />
