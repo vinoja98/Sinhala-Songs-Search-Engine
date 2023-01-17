@@ -77,8 +77,30 @@ const App = () => {
               <div className='results-card'>
                 <div className='results-text'>
                   <p>Title: {document._source.title}</p>
-                  <p>Music Composer: {document._source.musicComposer}</p>
-                  <p>Lyricist: {document._source.lyricist}</p>
+                  <p>Genre: {document._source.genre.map((doc,index)=>(
+                        <>
+                          {doc}
+                          {index !== document._source.genre.length - 1 ? ', ' : ''}
+                        </>
+                   ))}</p>
+                  <p>Artist: {document._source.artist.map((doc,index)=>(
+                        <>
+                          {doc}
+                          {index !== document._source.artist.length - 1 ? ', ' : ''}
+                        </>
+                   ))}</p>
+                  <p>Music Composer: {document._source.musicComposer.map((doc,index)=>(
+                        <>
+                          {doc}
+                          {index !== document._source.musicComposer.length - 1 ? ', ' : ''}
+                        </>
+                   ))}</p>
+                  <p>Lyricist: {document._source.lyricist.map((doc,index)=>(
+                        <>
+                          {doc}
+                          {index !== document._source.lyricist.length - 1 ? ', ' : ''}
+                        </>
+                   ))}</p>
                   <p>Metaphor: {document._source.metaphor}</p>
                   <p>Interpretation: {document._source.interpretation}</p>
                   <p>Views: {document._source.views}</p>
