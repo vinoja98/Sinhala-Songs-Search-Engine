@@ -24,7 +24,7 @@ The search engine will be developed to search about *Sinhala songs in the new po
     - Search a song by name of the musicComposer\
         Example - තිළිණ රුහුණුගේ විසින් සංගීතවත් කළ ගීත
     - Search a song by name of the lyricist\
-        Example - යමුනා මාලනී පෙරේරා රචනා කළ සිංදු, ධර්මරත්න පෙරේරා විසින් රචිත ගීත
+        Example - යමුනා  මාලනී පෙරේරා  රචනා  කළ සිංදු, ධර්මරත්න පෙරේරා  විසින් රචිත ගීත
 - **Faceted Search**\
     Filter search results based on the music composer and the lyricist
 - **Sort by Views**
