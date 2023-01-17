@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './App.css';
 
 const App = () => {
-  const [chosenArtist, setchosenArtist] = useState(null);
+  const [chosen, setchosen] = useState(null);
   const [documents, setDocuments] = useState(null);
   const [lyricistAgg, setLyricistAgg] = useState(null);
   const [musicComposerAgg, setMusicComposerAgg] = useState(null);
@@ -14,7 +14,7 @@ const App = () => {
       url: 'http://localhost:3002/results',
       params: {
      
-        artist: chosenArtist,
+        para: chosen,
    
       },
     };
@@ -40,7 +40,7 @@ const App = () => {
       </nav>
       <p className='directions'>
         {' '}
-        Enter a query by using the name of the Artist:
+        Enter the Search Query:
       </p>
       <div className='main'>
         <div className='type-selector'>
@@ -53,8 +53,8 @@ const App = () => {
                     className='form'
                     type='text'
                     placeholder='Full text search'
-                    value={chosenArtist}
-                    onChange={(e) => setchosenArtist(e.target.value)}
+                    value={chosen}
+                    onChange={(e) => setchosen(e.target.value)}
                   />
                 </label>
               </form>

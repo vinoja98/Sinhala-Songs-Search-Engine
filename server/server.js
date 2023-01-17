@@ -13,7 +13,7 @@ app.use(cors());
 
 app.get('/results', (req, res) => {
 
-  const passedArtist = req.query.artist;
+  const passed = req.query.para;
 
 
   async function sendESRequest() {
@@ -27,7 +27,7 @@ app.get('/results', (req, res) => {
               {
                 match: 
                     { artist: 
-                        { query: passedArtist,
+                        { query: passed,
                             operator: "AND"
                         } 
                     },
