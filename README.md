@@ -10,12 +10,15 @@ The search engine will be developed to search about *Sinhala songs in the new po
 - Go to corpus directory & Run `scrapy crawl songs -O data.json` to store the scraped data in json format(& in unicode).
 - Go to corpus/corpus directory & Run `python3 -m unicode_converter` to convert unicode to Sinhala characters.
 
-## Indexing
+## Indexing and Text Processing
 - Use PUT /songs and add content in search/tokenize.json in Kibana Console to create index
 - Use POST _bulk and add content in corpus/song1.txt to add documents to the index
+- When creating the index,
+    - The built-in standard tokenizer is used to tokenize the text. The standard tokenizer splits  the text into words  based on whitespace and punctuation, which is a common way of tokenizing text.
+    - The "stop" filter is used to remove words that are not useful for search.
 
 ## Main functions of the system
-- **Full Text Search**\
+- **Full Text Search**
     - Search a song by name of the artist\
         Example - සුනිල් එදිරිසිංහ ගැයු ගීත, සුනිල් එදිරිසිංහ කිව් ගී
     - Search a song by name of the musicComposer\
