@@ -29,6 +29,8 @@ The search engine will be developed to search about *Sinhala songs in the new po
         Example - සම්භාව්ය වර්ගයේ ගීත, නව පොප් වර්ගයේ ගී
     - Search a song based on the title\
         Example - ඔය සුසුම් පවන්
+    - Search a song based on the lyrics\
+        Example - කොඳුර කොඳුර කවි කියන්න
 - **Faceted Search**\
     Filter search results based on the music composer and the lyricist
 - **Sort by Views**
