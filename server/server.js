@@ -23,7 +23,7 @@ app.get('/results', (req, res) => {
         size: 100,
         query: {
           bool: {
-            filter: [
+            should: [
               {
                 match: 
                     { artist: 
@@ -31,8 +31,43 @@ app.get('/results', (req, res) => {
                             operator: "AND"
                         } 
                     },
-              },
-              
+              }
+              ,
+              {
+                match: 
+                    { musicComposer: 
+                        { query: passed,
+                            operator: "AND"
+                        } 
+                    },
+              }
+              ,
+              {
+                match: 
+                    { lyricist: 
+                        { query: passed,
+                            operator: "AND"
+                        } 
+                    },
+              }
+              ,
+              {
+                match: 
+                    { genre: 
+                        { query: passed,
+                            operator: "AND"
+                        } 
+                    },
+              }
+              ,
+              {
+                match:
+                  { title:
+                    { query: passed,
+                      operator: "AND"
+                    }
+                  }
+              }
             ],
           },
         },
@@ -55,7 +90,7 @@ app.get('/results', (req, res) => {
             }
           }
         }
-      },
+      }
     });
     res.json({
       hits: body.hits.hits,
