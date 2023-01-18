@@ -70,12 +70,8 @@ app.get('/results', (req, res) => {
               }
               ,
               {
-                match:
-                  { lyrics:
-                    { query: passed,
-                      operator: "AND"
-                    }
-                  }
+                match_phrase:
+                  { lyrics: passed }
               }
             ],
           },
