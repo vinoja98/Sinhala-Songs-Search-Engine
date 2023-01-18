@@ -27,6 +27,8 @@ The search engine will be developed to search about *Sinhala songs in the new po
         Example - යමුනා මාලනී පෙරේරා රචනා කළ සිංදු, ධර්මරත්න පෙරේරා විසින් රචිත ගීත
     - Search a song based on the genre\
         Example - සම්භාව්ය වර්ගයේ ගීත, නව පොප් වර්ගයේ ගී
+    - Search a song based on the title\
+        Example - ඔය සුසුම් පවන්
 - **Faceted Search**\
     Filter search results based on the music composer and the lyricist
 - **Sort by Views**
