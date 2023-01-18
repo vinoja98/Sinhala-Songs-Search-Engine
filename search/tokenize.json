@@ -77,12 +77,7 @@
       },
       "lyrics": {
         "type": "text",
-        "analyzer": "my_analyzer",
-        "fields": {
-          "keyword": {
-            "type": "keyword"
-               }
-          }
+        "analyzer": "my_analyzer"
       }
     }
   }
